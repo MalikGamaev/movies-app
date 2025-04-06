@@ -25,7 +25,7 @@ class Movie extends React.Component {
         .join(' ')
         .replace(/[,.!?]$/, '')}...`
     }
-    if (arrayTitle.length > 19 || genres.lenght > 3) {
+    if (arrayTitle.length > 19 || genres.length > 3) {
       return `${arrayDesk
         .slice(0, 25)
         .join(' ')
