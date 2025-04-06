@@ -1,0 +1,134 @@
+.movie {
+  width: 451px;
+  height: 279px;
+  box-shadow: 0 4px 12px 0 #00000026;
+  display: flex;
+}
+
+.movie__main {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 279px;
+  overflow: hidden;
+}
+
+.movie__image-item {
+  width: 183px;
+  height: 278px;
+}
+
+.movie__image-m {
+  display: none;
+  float: left;
+}
+
+.movie__content {
+  width: 100%;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #000000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie__title {
+  width: 100%;
+  display: flex;
+  gap: 13px;
+}
+
+.movie__title-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie__title-text {
+  width: 86%;
+}
+
+.movie__date {
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #827e7e;
+}
+
+.movie__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.movie__categories-item {
+  background-color: #fafafa;
+  width: max-content;
+  height: 25px;
+  padding: 0 5px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px !important;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.movie__categories-item:hover {
+  border: 1px solid rebeccapurple !important;
+  color: rebeccapurple !important;
+}
+
+.movie__description {
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+
+.movie__title-raiting {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 1119px) {
+  .movie {
+    width: 100%;
+    height: 250px;
+  }
+
+  .movie__image {
+    display: none;
+  }
+
+  .movie__image-m {
+    display: block;
+    width: 60px;
+    height: 91px;
+  }
+
+  .movie__main {
+    padding: 6px 10px;
+    min-height: 250px;
+  }
+
+  .movie__rate {
+    align-self: end;
+  }
+}

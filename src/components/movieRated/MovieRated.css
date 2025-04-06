@@ -1,0 +1,12 @@
+.movie-rated__items {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 37px;
+}
+
+.movie-rated {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
