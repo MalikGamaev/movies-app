@@ -19,10 +19,6 @@ class Movie extends React.Component {
 
     let maxLength = 30
 
-    if (arrayDesc.length === 0) {
-      return 'This is a cool and interesting movie, unfortunately there is no description for this movie, but we recommend watching it.'
-    }
-
     if (window.innerWidth < 1119 && window.innerWidth > 500) {
       return desc
     }
