@@ -13,27 +13,27 @@ class Movie extends React.Component {
   moviesServices = new MoviesService()
 
   formatOverview = (desc, title, genres) => {
-    const arrayDesk = desc.split(' ')
+    const arrayDesc = desc.split(' ')
     const arrayTitle = title.split('')
+
+    let maxLength = 30
 
     if (window.innerWidth < 1119 && window.innerWidth > 500) {
       return desc
     }
+
     if (arrayTitle.length > 19 && genres.length > 3) {
-      return `${arrayDesk
-        .slice(0, 15)
-        .join(' ')
-        .replace(/[,.!?]$/, '')}...`
-    }
-    if (arrayTitle.length > 19 || genres.length > 3) {
-      return `${arrayDesk
-        .slice(0, 22)
-        .join(' ')
-        .replace(/[,.!?]$/, '')}...`
+      maxLength = 15
+    } else if (
+      arrayTitle.length > 19 ||
+      genres.length > 3 ||
+      (genres.length === 3 && genres.includes('Science Fiction'))
+    ) {
+      maxLength = 22
     }
 
-    return `${arrayDesk
-      .slice(0, 30)
+    return `${arrayDesc
+      .slice(0, maxLength)
       .join(' ')
       .replace(/[,.!?]$/, '')}...`
   }
