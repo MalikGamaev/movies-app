@@ -27,7 +27,7 @@ class Movie extends React.Component {
     } else if (
       arrayTitle.length > 19 ||
       genres.length > 3 ||
-      (genres.length === 3 && genres.includes('Science Fiction'))
+      (genres.length === 3 && genres.some((obj) => obj.name === 'Science Fiction'))
     ) {
       maxLength = 22
     }
