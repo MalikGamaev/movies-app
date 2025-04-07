@@ -23,7 +23,7 @@ class Movie extends React.Component {
     }
 
     if (arrayTitle.length > 19 && genres.length > 3) {
-      maxLength = 15
+      maxLength = 11
     } else if (
       arrayTitle.length > 19 ||
       genres.length > 3 ||
