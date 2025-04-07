@@ -1,9 +1,10 @@
 import { Button, Rate } from 'antd'
 import { format, parseISO } from 'date-fns'
 import React from 'react'
-import './Movie.css'
 
+import './Movie.css'
 import MoviesService from '../../API/MoviesService'
+import trollface from '../../assets/trollface.png'
 
 class Movie extends React.Component {
   state = {
@@ -59,12 +60,20 @@ class Movie extends React.Component {
     return (
       <div className="movie">
         <div className="movie__image">
-          <img className="movie__image-item" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
+          <img
+            className="movie__image-item"
+            src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : trollface}
+            alt={poster_path || 'заглушка'}
+          />
         </div>
         <div className="movie__main">
           <div className="movie__content">
             <div className="movie__title">
-              <img className="movie__image-m" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
+              <img
+                className="movie__image-item"
+                src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : trollface}
+                alt={poster_path || 'заглушка'}
+              />
               <div className="movie__title-content">
                 <div className="movie__title-text">{title}</div>
                 <div className="movie__date">{format(parseISO(release_date), 'MMMM d, y')}</div>
