@@ -70,7 +70,7 @@ class Movie extends React.Component {
           <div className="movie__content">
             <div className="movie__title">
               <img
-                className="movie__image-item"
+                className="movie__image-m"
                 src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : trollface}
                 alt={poster_path || 'заглушка'}
               />
